@@ -102,6 +102,14 @@ namespace Projeto_Final
 
             // Pegando o preço de informado de cada um e calculando.
             // Também pegando o radio button da comida selecionada.
+            if(lstOpcoes.CheckedItems.Count == 0)
+            {
+                MessageBox.Show("Deve ser selecionado pelo menos um item da lista de opções de acordo com a opção principal",
+                    "Erro ao pedir comida",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return;
+            }
             if (rdoMarmitex.Checked== true) //Marmitex
             {
                 selecionado_comida = rdoMarmitex.Text;
